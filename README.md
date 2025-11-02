@@ -2,4 +2,4 @@
 
  this is a test repository to learn how
  github works.
- more updates coming soon as i keep learing 
+ more updates coming soon as i keep learning
