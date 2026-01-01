@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>DEVIL CYANIDE</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-brand">
+            <h1><i class="fas fa-mug-hot heading-icon" aria-hidden="true"></i>DEVIL CYANIDE</h1>
+            <p>Premium Boba Tea Experience</p>
+        </div>
+        <div class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="cart-count">0</span>
+        </div>
+    </header>
+
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#products">Products</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+
+    <main>
+        <section id="home">
+            <div class="hero">
+                <h2>Welcome to DEVIL CYANIDE</h2>
+                <p>Experience the finest boba tea in town!</p>
+            </div>
+        </section>
+
+        <section id="products">
+            <h2>Our Menu</h2>
+            <div class="product-grid">
+                <div class="product-card">
+                    <picture>
+                        <!-- Prefer local JPG/WEBP if available -->
+                        <img src="images/boba-4402053_1280.jpg" alt="Classic Milk Tea" loading="lazy">
+                    </picture>
+                    <h3>Classic Milk Tea</h3>
+                    <p>Our signature milk tea with premium black tea blend</p>
+                    <p class="price">$4.99</p>
+                    <button class="add-to-cart" data-id="1" data-name="Classic Milk Tea" data-price="4.99">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <picture>
+                        <img src="images/pngtree-boba-drink-with-a-plain-background-this-drink-can-be-used-image_15568843.png" alt="Taro Milk Tea" loading="lazy">
+                    </picture>
+                    <h3>Taro Milk Tea</h3>
+                    <p>Creamy taro root flavor with chewy boba pearls</p>
+                    <p class="price">$5.49</p>
+                    <button class="add-to-cart" data-id="2" data-name="Taro Milk Tea" data-price="5.49">Add to Cart</button>
+                </div>
+                <div class="product-card">
+                    <picture>
+                        <img src="images/woman-hand-holding-brown-sugar-boba-milk-tea-with-tapioca-pearls-night-market_662214-392151.jpg" alt="Brown Sugar Milk" loading="lazy">
+                    </picture>
+                    <h3>Brown Sugar Milk</h3>
+                    <p>Fresh milk with caramelized brown sugar and boba</p>
+                    <p class="price">$5.99</p>
+                    <button class="add-to-cart" data-id="3" data-name="Brown Sugar Milk" data-price="5.99">Add to Cart</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="cart" class="hidden">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <div id="cart-total">
+                <p>Total: $<span id="total-amount">0.00</span></p>
+                <button id="checkout-btn">Proceed to Checkout</button>
+            </div>
+        </section>
+
+        <div id="checkout-modal" class="modal hidden">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h2>Checkout</h2>
+                <form id="checkout-form">
+                    <div>
+                        <label for="customer-name">Full Name:</label>
+                        <input type="text" id="customer-name" required>
+                    </div>
+                    <div>
+                        <label for="customer-email">Email:</label>
+                        <input type="email" id="customer-email" required>
+                    </div>
+                    <div>
+                        <label for="customer-phone">Phone:</label>
+                        <input type="tel" id="customer-phone" required>
+                    </div>
+                    <div>
+                        <label for="customer-address">Delivery Address:</label>
+                        <textarea id="customer-address" required></textarea>
+                    </div>
+                    <div>
+                        <label>
+                            <input type="checkbox" id="location-permission">
+                            Allow location access for delivery tracking
+                        </label>
+                    </div>
+                    <button type="submit">Place Order</button>
+                </form>
+            </div>
+        </div>
+
+        <section id="about">
+            <h2>About Us</h2>
+            <p>DEVIL CYANIDE brings you authentic Taiwanese bubble tea with a modern twist. Our boba pearls are freshly made every 4 hours, ensuring the perfect chewy texture in every drink.</p>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <form id="contact-form">
+                <div>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </div>
+                <div>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                <div>
+                    <label for="message">Message:</label>
+                    <textarea id="message" name="message" required></textarea>
+                </div>
+                <button type="submit">Send Message</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Location</h3>
+                <p>mvv srinivas nilayam,madhurawada</p>
+                <p>visakhapatnam, TC 12345</p>
+            </div>
+            <div class="footer-section">
+                <h3>Hours</h3>
+                <p>Mon-Fri: 10AM-10PM</p>
+                <p>Sat-Sun: 11AM-11PM</p>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                </div>
+            </div>
+        </div>
+        <p class="copyright">&copy; 2025 DEVIL CYANIDE. All rights reserved.</p>
+    </footer>
+</body>
+</html>

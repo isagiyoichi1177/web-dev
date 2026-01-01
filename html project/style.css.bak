@@ -1,0 +1,179 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+/* Header */
+header {
+  background-color: #000000;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+}
+.header-brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+.header-img {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+.cart-icon {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+#cart-count {
+  background-color: #ff4444;
+  color: #fff;
+  border-radius: 50%;
+  padding: 2px 6px;
+  font-size: 0.7rem;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+}
+
+/* Navigation */
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+nav a {
+  color: white;
+  padding: 14px 20px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+nav a:hover {
+  background-color: #45a049;
+}
+
+/* Main container */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background-color: #e8f5e9;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+/* Products */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+}
+
+.product-card {
+  background: #fff;
+  border-radius: 10px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.product-card:hover { transform: translateY(-6px); }
+
+.product-card img { width: 100%; border-radius: 6px; margin-bottom: 12px; }
+
+.product-card h3 { margin: 8px 0; color: #222; }
+.price { color: #4CAF50; font-weight: 700; margin: 8px 0; }
+
+.add-to-cart {
+  background-color: #4CAF50;
+  color: #fff;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.add-to-cart:hover { background-color: #3e8e41; }
+
+/* Heading icons */
+.heading-icon {
+  margin-right: 10px;
+  color: #fff;
+  background: rgba(0,0,0,0.08);
+  padding: 6px 8px;
+  border-radius: 6px;
+  vertical-align: middle;
+}
+
+/* Add a bubble-tea emoji before section h2 headings */
+h2::before {
+  content: "🧋";
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+/* Cart */
+#cart { background: #fff; padding: 18px; border-radius: 10px; box-shadow: 0 2px 6px rgba(0,0,0,0.06); margin-top: 20px; }
+.cart-item { display:flex; justify-content:space-between; padding:8px 0; border-bottom:1px solid #eee; }
+#cart-total { text-align:right; margin-top:14px; }
+
+/* Modal */
+.modal { display:none; position:fixed; inset:0; background:rgba(0,0,0,0.5); z-index:1200; }
+.modal.show { display:block; }
+.modal-content { background:#fff; width:calc(100% - 40px); max-width:520px; margin:60px auto; padding:20px; border-radius:10px; position:relative; }
+.close { position:absolute; right:14px; top:8px; font-size:22px; cursor:pointer; }
+
+/* Forms */
+form div { margin-bottom:12px; }
+label { display:block; margin-bottom:6px; }
+input, textarea { width:100%; padding:8px; border:1px solid #ddd; border-radius:6px; }
+textarea { min-height:100px; resize:vertical; }
+
+button { background:#4CAF50; color:#fff; border:none; padding:10px 16px; border-radius:6px; cursor:pointer; }
+button:hover { background:#3e8e41; }
+
+/* Footer */
+footer { background:#222; color:#ccc; padding:30px 20px; margin-top:30px; }
+.footer-content { max-width:1200px; margin:0 auto; display:grid; grid-template-columns:repeat(auto-fit, minmax(200px,1fr)); gap:24px; }
+.footer-section { text-align:center; }
+.social-links a { color:#fff; margin:0 8px; font-size:1.2rem; }
+
+/* Utility */
+.hidden { display:none; }
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  nav { flex-direction: column; }
+  nav a { border-bottom:1px solid rgba(255,255,255,0.06); }
+  .hero { padding:40px 12px; }
+}
